@@ -1,9 +1,9 @@
 <template>
   <div>
     <header class="header">
-      <router-link to="/menu" class="link">Menù</router-link>
+      <router-link to="/" class="logo"><img src="/logo-bot.png" alt="Logo QUBI" class="logo-img"></router-link>
 
-      <router-link to="/" class="logo"><img src="/logo.png" alt="Logo GianGusto" class="logo-img"></router-link>
+      <!-- <router-link to="/menu" class="link">Menù</router-link> -->
 
       <router-link to="/contatti" class="link">Contatti</router-link>
     </header>
@@ -19,8 +19,6 @@
           <h3>Consulta il manuale</h3>
           <a class="manuale-btn" href="/manuale.pdf">CLICCA QUI</a>
         </div>
-
-        <img src="/gian.png" alt="Mascotte GianGusto" class="footer-img"/>
     </footer>
 
   </div>
