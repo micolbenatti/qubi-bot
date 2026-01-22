@@ -1,14 +1,14 @@
 <template>
   <div>
-    <header class="header">
+    <div id="navbar" class="flex items-center justify-between w-full h-20 bg-white/90 backdrop-blur-md p-4 fixed top-0 z-50 text-[var(--primary)] font-bold ">
       <router-link to="/" class="logo"><img src="/logo-bot.png" alt="Logo QUBI" class="logo-img"></router-link>
 
       <!-- <router-link to="/menu" class="link">Menù</router-link> -->
 
       <router-link to="/contatti" class="link">Contatti</router-link>
-    </header>
+    </div>
 
-    <main>
+    <main class="w-full h-full pt-20 flex items-center justify-center">
       <router-view @apri-chat="chatVisibile = true" />
     </main>
 
@@ -33,21 +33,8 @@ const chatVisibile = ref(false)
 
 <style scoped>
 
-.header {
-  width:100%;
-  height: 5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.25rem 2rem;
-  font-size: 1rem;
-  font-weight: 600;
-  text-transform: uppercase;
+#navbar {
   box-shadow: 0 2px 6px rgba(62, 32, 14, 0.2);
-  top: 0;
-  z-index: 50;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
 }
 
 .logo {
@@ -59,6 +46,23 @@ const chatVisibile = ref(false)
 .logo-img {
   height: 3rem;
   object-fit: contain;
+}
+
+.link {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  color: var(--primary);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.link:hover {
+  background-color: rgba(62, 32, 14, 0.08);
+}
+
+.router-link-active.link,
+.router-link-exact-active.link {
+  background-color: var(--primary);
+  color: #fff;
 }
 
 .footer {
